@@ -1,0 +1,38 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--blue-800);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.logo--inverse {
+  color: var(--white);
+}
+
+.logo__mark {
+  display: inline-flex;
+  color: var(--blue-700);
+}
+
+.logo--inverse .logo__mark {
+  color: var(--white);
+}
+
+.logo__o {
+  color: var(--blue-500);
+}
+
+.logo--inverse .logo__o {
+  color: var(--blue-150);
+}
+
+.logo__image {
+  height: 36px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+}

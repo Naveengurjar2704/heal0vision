@@ -1,0 +1,133 @@
+.about-hero {
+  background: var(--blue-50);
+  padding-block: 80px;
+}
+
+.about-hero__inner {
+  max-width: 720px;
+}
+
+.about-hero h1 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin-top: 16px;
+}
+
+.about-hero p {
+  margin-top: 20px;
+  font-size: 1.05rem;
+  color: var(--ink-700);
+  line-height: 1.7;
+}
+
+.about-mission {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.about-mission__text {
+  color: var(--ink-700);
+  line-height: 1.75;
+  margin-bottom: 18px;
+}
+
+.about-values {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--blue-50);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 26px;
+}
+
+.about-values li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.about-values li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.about-values strong {
+  color: var(--blue-800);
+  font-size: 0.95rem;
+}
+
+.about-values span {
+  font-size: 0.86rem;
+  color: var(--ink-500);
+}
+
+.doctor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.doctor-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  text-align: left;
+}
+
+.doctor-card__photo {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.doctor-card h3 {
+  margin-top: 20px;
+  margin-inline: 24px;
+  font-size: 1.1rem;
+}
+
+.doctor-card__role {
+  margin-top: 6px;
+  margin-inline: 24px;
+  color: var(--blue-600);
+  font-weight: 600;
+  font-size: 0.86rem;
+}
+
+.doctor-card__credentials {
+  margin-top: 10px;
+  margin-inline: 24px;
+  margin-bottom: 24px;
+  color: var(--ink-500);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.about-cta {
+  text-align: center;
+}
+
+.about-cta__inner {
+  max-width: 520px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.about-cta p {
+  color: var(--ink-500);
+  margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  .about-mission {
+    grid-template-columns: 1fr;
+  }
+}

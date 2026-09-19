@@ -1,0 +1,184 @@
+.procedure-hero {
+  background: var(--blue-800);
+  color: var(--white);
+  padding-block: 72px;
+}
+
+.procedure-hero__inner {
+  max-width: 720px;
+}
+
+.procedure-hero h1 {
+  color: var(--white);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin-top: 14px;
+}
+
+.procedure-hero p {
+  margin-top: 18px;
+  color: var(--blue-150);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.procedure-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.procedure-hero .btn-outline {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: var(--white);
+}
+
+.procedure-hero .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.procedure-detail__grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.procedure-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.procedure-steps li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.procedure-steps span {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--blue-100);
+  color: var(--blue-700);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.procedure-steps p {
+  color: var(--ink-700);
+  line-height: 1.65;
+  padding-top: 5px;
+}
+
+.procedure-aside {
+  background: var(--blue-50);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  position: sticky;
+  top: 100px;
+}
+
+.procedure-aside h3 {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+.procedure-aside ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.procedure-aside li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 0.92rem;
+  color: var(--ink-700);
+}
+
+.procedure-aside li svg {
+  color: var(--blue-600);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.procedure-aside__recovery {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.procedure-aside__recovery strong {
+  display: block;
+  color: var(--blue-800);
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+.procedure-aside__recovery p {
+  font-size: 0.9rem;
+  color: var(--ink-500);
+  line-height: 1.6;
+}
+
+.procedure-other-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.procedure-other-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.procedure-other-card:hover {
+  border-color: var(--blue-300);
+  background: var(--blue-50);
+}
+
+.procedure-other-card strong {
+  color: var(--blue-800);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+}
+
+.procedure-other-card span {
+  color: var(--ink-500);
+  font-size: 0.9rem;
+}
+
+.procedure-detail__view-all {
+  display: inline-flex;
+  margin-top: 24px;
+  font-weight: 600;
+  color: var(--blue-700);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 900px) {
+  .procedure-detail__grid {
+    grid-template-columns: 1fr;
+  }
+  .procedure-aside {
+    position: static;
+  }
+}
+
+@media (max-width: 560px) {
+  .procedure-other-grid {
+    grid-template-columns: 1fr;
+  }
+}

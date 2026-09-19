@@ -1,0 +1,30 @@
+.cta-banner {
+  background: var(--blue-800);
+  color: var(--white);
+}
+
+.cta-banner__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding-block: 56px;
+}
+
+.cta-banner h2 {
+  color: var(--white);
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  max-width: 24ch;
+}
+
+.cta-banner p {
+  margin-top: 8px;
+  color: var(--blue-150);
+}
+
+.cta-banner__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}

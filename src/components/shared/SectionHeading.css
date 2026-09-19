@@ -1,0 +1,35 @@
+.section-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 640px;
+  margin-bottom: 48px;
+}
+
+.section-heading--center {
+  align-items: center;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.section-heading h2 {
+  font-size: clamp(1.7rem, 2.6vw, 2.4rem);
+}
+
+.section-heading__desc {
+  color: var(--ink-500);
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+.section-heading--inverse .section-heading__desc {
+  color: var(--blue-150);
+}
+
+.section-heading--inverse .eyebrow {
+  color: var(--blue-150);
+}
+
+.section-heading--inverse .eyebrow::before {
+  background: var(--blue-150);
+}

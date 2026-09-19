@@ -1,0 +1,43 @@
+.comparison {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.comparison table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 620px;
+}
+
+.comparison th,
+.comparison td {
+  padding: 16px 20px;
+  text-align: left;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.comparison thead th {
+  background: var(--blue-800);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.comparison tbody th {
+  color: var(--blue-800);
+  font-weight: 600;
+  background: var(--blue-50);
+  white-space: nowrap;
+}
+
+.comparison tbody tr:last-child td,
+.comparison tbody tr:last-child th {
+  border-bottom: none;
+}
+
+.comparison td {
+  color: var(--ink-700);
+}
