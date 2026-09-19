@@ -13,8 +13,8 @@ export default function About() {
           <h1>A clinic focused on one thing: your vision</h1>
           <p>
             We don't offer every eye procedure under the sun — we specialise in laser vision
-            correction, so every recommendation, from LASIK to SMILE to TransPRK, comes from
-            genuine expertise rather than a broad menu of services.
+            correction, so every recommendation, from Custom LASIK to Femto LASIK, SMILE to
+            Touchless, comes from genuine expertise rather than a broad menu of services.
           </p>
         </div>
       </section>
@@ -26,12 +26,13 @@ export default function About() {
             <p className="about-mission__text">
               Every patient starts with a free, comprehensive eye check-up — corneal mapping,
               prescription and eye-health screening — before any procedure is discussed. We'd
-              rather tell you which of LASIK, SMILE or TransPRK genuinely fits your eyes than
-              push whichever is most convenient for us.
+              rather tell you which of Custom LASIK, Femto LASIK, SMILE or Touchless genuinely
+              fits your eyes than push whichever is most convenient for us.
             </p>
             <p className="about-mission__text">
-              We also handle the parts patients dread most: cashless insurance paperwork and
-              no-cost EMI setup, so the financial side never gets in the way of a clear decision.
+              We also handle the parts patients dread most: insurance paperwork — all insurance
+              accepted — and no-cost EMI setup, so the financial side never gets in the way of a
+              clear decision.
             </p>
           </div>
           <ul className="about-values">

@@ -89,7 +89,7 @@ export default function ProcedureDetail() {
               ))}
             </div>
             {others.length > 4 && (
-              <Link to="/#procedures" className="procedure-detail__view-all">
+              <Link to="/procedures" className="procedure-detail__view-all">
                 View all eye care services →
               </Link>
             )}

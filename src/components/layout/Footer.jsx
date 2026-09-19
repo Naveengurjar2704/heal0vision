@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import Logo from "./Logo";
 import InstagramIcon from "../shared/InstagramIcon";
 import { laserProcedures } from "../../data/procedures";
-import { clinicInfo, insurancePartners } from "../../data/clinicInfo";
+import { clinicInfo, insurancePartners, featuredInsurancePartners } from "../../data/clinicInfo";
 import "./Footer.css";
 
 export default function Footer() {
@@ -28,7 +28,7 @@ export default function Footer() {
               </li>
             ))}
             <li>
-              <Link to="/#procedures">More eye care →</Link>
+              <Link to="/procedures">All eye surgery →</Link>
             </li>
           </ul>
         </div>
@@ -37,6 +37,7 @@ export default function Footer() {
           <h4>Explore</h4>
           <ul>
             <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/insurance">Insurance Partners</Link></li>
             <li><Link to="/contact">Book a Consultation</Link></li>
             <li><Link to="/#journey">Your Care Journey</Link></li>
             <li><Link to="/#faq">FAQs</Link></li>
@@ -67,18 +68,21 @@ export default function Footer() {
       </div>
 
       <div className="footer__partners container">
-        <span>Cashless insurance partners:</span>
+        <span>All insurance accepted*:</span>
         <div className="footer__partner-list">
-          {insurancePartners.map((name) => (
+          {featuredInsurancePartners.map((name) => (
             <span key={name} className="footer__partner">{name}</span>
           ))}
+          <Link to="/insurance" className="footer__partner footer__partner--more">
+            + {insurancePartners.length - featuredInsurancePartners.length} more
+          </Link>
         </div>
       </div>
 
       <div className="footer__bottom container">
         <p>© {new Date().getFullYear()} Heal O Vision. All rights reserved.</p>
         <p className="footer__disclaimer">
-          Information on this site is for general awareness and does not replace an in-person consultation.
+          *T&amp;C apply on insurance cover. Information on this site is for general awareness and does not replace an in-person consultation.
         </p>
       </div>
     </footer>

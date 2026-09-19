@@ -6,30 +6,32 @@ import RotatingWords from "../shared/RotatingWords";
 import RotatingImage from "../shared/RotatingImage";
 import "./Hero.css";
 
-// Word + photo shown together, in sync, from one shared timer — each pair is
-// matched to what the photo actually depicts (e.g. the Centurion system
-// photo is paired with "Cataract", not "LASIK", since that's a cataract
-// platform, not a refractive laser). Words are kept short and similar in
-// length on purpose: a long line wraps to a 3rd line and shoves the rest of
-// the hero down as it rotates.
+// Word + photo shown together, in sync, from one shared timer. Words are
+// kept short and similar in length on purpose: a long line wraps to a 3rd
+// line and shoves the rest of the hero down as it rotates. Alt text stays
+// generic where we don't have a photo of the exact matching equipment, so
+// nothing here overclaims what a photo actually shows.
 const heroFrames = [
-  { word: "Better life.", src: "/images/hero-checkup.jpg", alt: "A patient having a routine eye check-up" },
   {
-    word: "with LASIK.",
+    word: "with Custom LASIK.",
     src: "/images/hero-laser-machine.jpg",
     alt: "Surgeons operating a laser vision correction machine",
   },
   {
-    word: "with gentle care.",
-    src: "/images/hero-eyedrops.jpg",
-    alt: "A nurse administering eye drops to a patient before their procedure",
+    word: "with Femto LASIK.",
+    src: "/images/hero-lasik.jpg",
+    alt: "A surgeon performing precision eye surgery using an operating microscope",
   },
   {
-    word: "with Cataract.",
-    src: "/images/hero-lasik.jpg",
-    alt: "A surgeon performing eye surgery using an operating microscope",
+    word: "with SMILE.",
+    src: "/images/hero-eyedrops.jpg",
+    alt: "Our care team looking after a patient before their procedure",
   },
-  { word: "with precision.", src: "/images/hero-machine.jpg", alt: "Close-up of a phoropter used to test a patient's vision" },
+  {
+    word: "with Touchless.",
+    src: "/images/hero-machine.jpg",
+    alt: "Close-up of precision diagnostic equipment used before your procedure",
+  },
 ];
 
 const rotatingLines = heroFrames.map((f) => f.word);

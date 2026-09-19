@@ -18,6 +18,16 @@
   text-overflow: ellipsis;
 }
 
+.announcement__link {
+  color: var(--white);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.announcement__link:hover {
+  color: var(--blue-150);
+}
+
 .announcement__links {
   display: flex;
   align-items: center;

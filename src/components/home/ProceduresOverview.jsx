@@ -11,7 +11,7 @@ export default function ProceduresOverview() {
       <div className="container">
         <SectionHeading
           eyebrow="Laser vision correction"
-          title="Three ways to see the world clearly"
+          title="Four ways to see the world clearly"
           description="We focus first on laser vision correction — so our advice is about which technique suits your eyes, not what's easiest for us to sell."
         />
 

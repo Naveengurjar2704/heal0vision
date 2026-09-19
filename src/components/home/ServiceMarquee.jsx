@@ -1,8 +1,8 @@
 import { procedures } from "../../data/procedures";
-import { insurancePartners } from "../../data/clinicInfo";
+import { featuredInsurancePartners } from "../../data/clinicInfo";
 import "./ServiceMarquee.css";
 
-const items = [...procedures.map((p) => p.name), ...insurancePartners.map((n) => `${n} · cashless`)];
+const items = [...procedures.map((p) => p.name), "All Insurance Accepted", ...featuredInsurancePartners];
 const track = [...items, ...items];
 
 export default function ServiceMarquee() {

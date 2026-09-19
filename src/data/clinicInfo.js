@@ -9,24 +9,70 @@ export const clinicInfo = {
   phoneHref: "tel:+919220559420",
   whatsappHref: "https://wa.me/919220559420",
   instagram: "https://www.instagram.com/healovision/",
-  email: "care@healovision.com", // PLACEHOLDER — confirm real inbox
+  email: "info@healovision.in",
   address: "Plot No. WZ-G-1/87, Khasra No. 86/3, G-1, Old Village Hastsal, Uttam Nagar, New Delhi, 110059",
   mapEmbedQuery: "", // PLACEHOLDER — Google Maps place link
   hours: "Mon – Sat: 10:00 AM – 7:00 PM", // PLACEHOLDER — confirm real hours
 };
 
+// Full list of insurance companies and TPAs the clinic bills with,
+// as supplied by the clinic. Order matches their own list.
 export const insurancePartners = [
-  "HDFC ERGO",
-  "ICICI Lombard",
-  "Bajaj Allianz",
-  "TATA AIG",
-  "Star Health",
+  "Aditya Birla Health Insurance",
+  "Bajaj Allianz Insurance",
+  "Care Health Insurance",
+  "Cholamandalam General Insurance",
+  "East West Assist TPA",
+  "Ericson Insurance TPA",
+  "Family Health Plan (TPA)",
+  "Future Generali India Insurance",
+  "Genins India Insurance TPA",
+  "Go Digit General Insurance",
+  "Good Health TPA Services",
+  "HDFC ERGO General Insurance",
+  "Health Assist Insurance TPA",
+  "Health India TPA Services",
+  "Health Insurance TPA of India",
+  "Heritage Health TPA",
+  "ICICI Lombard General Insurance",
+  "ICICI Prudential Life Insurance",
+  "IFFCO Tokio General Insurance",
+  "L&T General Insurance",
+  "Liberty General Insurance",
+  "Manipal Cigna Health Insurance",
+  "MD India Healthcare (TPA) Services",
+  "Medi Assist India TPA",
+  "Medsave Health Care TPA",
+  "Navi Health Insurance",
+  "Niva Bupa Health Insurance",
+  "Paramount Health Services (TPA)",
+  "Park Mediclaim TPA",
+  "Raksha TPA",
+  "Reliance General Insurance (R Care Health)",
+  "SBI General Insurance",
+  "Star Health and Allied Insurance",
+  "TATA AIG General Insurance",
+  "Universal Sompo General Insurance",
+  "Vidal Health TPA (Vipul)",
+];
+
+// Shown in the footer / marquee before the "+N more" link.
+export const featuredInsurancePartners = [
+  "HDFC ERGO General Insurance",
+  "ICICI Lombard General Insurance",
+  "Bajaj Allianz Insurance",
+  "TATA AIG General Insurance",
+  "Star Health and Allied Insurance",
+  "Niva Bupa Health Insurance",
+  "Care Health Insurance",
+  "Aditya Birla Health Insurance",
 ];
 
 export const trustHighlights = [
   {
-    title: "Cashless insurance",
-    detail: "Direct billing with leading insurers, so you don't pay out of pocket at the time of surgery.",
+    title: "All Insurance Accepted",
+    detail:
+      "Direct billing with 36 insurance companies and TPAs, so you don't pay out of pocket at the time of surgery. T&C apply.",
   },
   {
     title: "No-cost EMI",
@@ -42,11 +88,10 @@ export const trustHighlights = [
   },
 ];
 
-// NOTE: Figures below are placeholders for layout purposes only.
-// Replace with the clinic's real, verifiable numbers before publishing.
 export const stats = [
   { value: "15K+", label: "Instagram community" }, // verified — public follower count
-  { value: "3", label: "Laser vision procedures offered" }, // verified — LASIK, SMILE, TransPRK
-  { value: "5", label: "Insurance partners for cashless surgery" }, // verified — partner count
+  { value: "817+", label: "Surgeries performed successfully" }, // supplied by the clinic
+  // Derived from the list above so the count can never drift out of sync.
+  { value: `${insurancePartners.length}`, label: "Insurance & TPA partners" },
   { value: "0%", label: "Cost EMI available" }, // verified — real offer, not a count claim
 ];

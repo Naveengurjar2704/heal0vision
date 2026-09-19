@@ -9,13 +9,13 @@ export const journeySteps = [
     step: "02",
     title: "Insurance & EMI Approval",
     detail:
-      "Our team handles cashless approval directly with your insurer, or sets up no-cost EMI — before you worry about a single form.",
+      "All insurance accepted — our team handles approval directly with your insurer, or sets up no-cost EMI, before you worry about a single form.",
   },
   {
     step: "03",
     title: "Personalised Procedure Plan",
     detail:
-      "Your surgeon recommends LASIK, SMILE or TransPRK based on your prescription, corneal thickness and lifestyle — never a one-size-fits-all pitch.",
+      "Your surgeon recommends Custom LASIK, Femto LASIK, SMILE or Touchless based on your prescription, corneal thickness and lifestyle — never a one-size-fits-all pitch.",
   },
   {
     step: "04",

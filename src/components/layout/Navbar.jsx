@@ -34,34 +34,32 @@ export default function Navbar() {
               onMouseEnter={() => setProceduresOpen(true)}
               onMouseLeave={() => setProceduresOpen(false)}
             >
-              <button
-                type="button"
-                className="navbar__link navbar__link--btn"
-                onClick={() => setProceduresOpen((v) => !v)}
-                aria-expanded={proceduresOpen}
-              >
-                Procedures <ChevronDown size={15} />
-              </button>
-              {proceduresOpen && (
-                <div className="navbar__dropdown-menu">
-                  <span className="navbar__dropdown-heading">Laser vision correction</span>
-                  {laserProcedures.map((p) => (
-                    <Link key={p.slug} to={`/procedures/${p.slug}`} className="navbar__dropdown-item">
-                      <strong>{p.name}</strong>
-                      <span>{p.fullName}</span>
-                    </Link>
-                  ))}
-                  <span className="navbar__dropdown-heading">More eye care</span>
-                  {moreEyeCareProcedures.map((p) => (
-                    <Link key={p.slug} to={`/procedures/${p.slug}`} className="navbar__dropdown-item">
-                      <strong>{p.name}</strong>
-                      <span>{p.fullName}</span>
-                    </Link>
-                  ))}
-                </div>
-              )}
+              <NavLink to="/procedures" end className="navbar__link">
+                All Eye Surgery <ChevronDown size={15} aria-hidden="true" />
+              </NavLink>
+              {/* Always rendered — CSS hides it on desktop until hovered, and
+                  keeps it expanded inline inside the mobile drawer. */}
+              <div className={`navbar__dropdown-menu ${proceduresOpen ? "navbar__dropdown-menu--open" : ""}`}>
+                <span className="navbar__dropdown-heading">Laser vision correction</span>
+                {laserProcedures.map((p) => (
+                  <Link key={p.slug} to={`/procedures/${p.slug}`} className="navbar__dropdown-item">
+                    <strong>{p.name}</strong>
+                    <span>{p.fullName}</span>
+                  </Link>
+                ))}
+                <span className="navbar__dropdown-heading">More eye care</span>
+                {moreEyeCareProcedures.map((p) => (
+                  <Link key={p.slug} to={`/procedures/${p.slug}`} className="navbar__dropdown-item">
+                    <strong>{p.name}</strong>
+                    <span>{p.fullName}</span>
+                  </Link>
+                ))}
+              </div>
             </div>
 
+            <NavLink to="/insurance" className="navbar__link">
+              Insurance
+            </NavLink>
             <NavLink to="/about" className="navbar__link">
               About
             </NavLink>

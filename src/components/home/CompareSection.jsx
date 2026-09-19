@@ -8,7 +8,7 @@ export default function CompareSection() {
       <div className="container">
         <SectionHeading
           eyebrow="Compare procedures"
-          title="LASIK vs. SMILE vs. TransPRK, at a glance"
+          title="Compare our laser vision procedures, at a glance"
           description="Every eye is different — this is a starting point for conversation, not a diagnosis. Your free check-up confirms what's right for you."
         />
         <ComparisonTable />

@@ -1,0 +1,236 @@
+.welcome-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.welcome-popup__backdrop {
+  position: absolute;
+  inset: 0;
+  border: none;
+  background: rgba(5, 40, 64, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  animation: welcomeFade 0.3s ease both;
+  cursor: default;
+}
+
+.welcome-popup__card {
+  position: relative;
+  width: min(720px, 100%);
+  max-height: calc(100dvh - 40px);
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  animation: welcomePop 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 0.05s;
+}
+
+.welcome-popup__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--ink-700);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.welcome-popup__close:hover {
+  background: var(--white);
+  color: var(--blue-800);
+}
+
+.welcome-popup__visual {
+  position: relative;
+  min-height: 200px;
+}
+
+.welcome-popup__visual img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.welcome-popup__visual-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(5, 40, 64, 0.72) 0%, rgba(5, 40, 64, 0) 45%);
+}
+
+.welcome-popup__ribbon {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  right: 16px;
+  color: var(--white);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.welcome-popup__content {
+  padding: 26px 26px 22px;
+  min-width: 0;
+}
+
+.welcome-popup__content h3 {
+  font-size: 1.35rem;
+  margin-top: 8px;
+}
+
+.welcome-popup__lede {
+  margin-top: 8px;
+  color: var(--ink-700);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.welcome-popup__lede strong {
+  color: var(--blue-700);
+}
+
+.welcome-popup__trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.welcome-popup__trust li {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--blue-100);
+  color: var(--blue-700);
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.welcome-popup__form-wrap {
+  margin-top: 16px;
+}
+
+/* The popup is narrower than a page section at any viewport width, so the
+   form's own viewport-based breakpoint won't fire — force single column. */
+.welcome-popup__form-wrap .contact-form__grid {
+  grid-template-columns: 1fr;
+}
+
+.welcome-popup__form-wrap .contact-form {
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  gap: 10px;
+}
+
+.welcome-popup__form-wrap .contact-form__row {
+  gap: 4px;
+}
+
+.welcome-popup__form-wrap .contact-form label {
+  font-size: 0.78rem;
+}
+
+.welcome-popup__form-wrap .contact-form input,
+.welcome-popup__form-wrap .contact-form select {
+  padding: 9px 12px;
+  font-size: 0.9rem;
+}
+
+.welcome-popup__form-wrap .btn {
+  padding: 11px 22px;
+}
+
+.welcome-popup__later {
+  display: block;
+  margin: 10px auto 0;
+  background: none;
+  border: none;
+  color: var(--ink-300);
+  font-size: 0.8rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.welcome-popup__later:hover {
+  color: var(--ink-500);
+}
+
+@keyframes welcomeFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes welcomePop {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 720px) {
+  .welcome-popup {
+    padding: 14px;
+  }
+  .welcome-popup__card {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    width: min(420px, 100%);
+    max-height: calc(100dvh - 28px);
+  }
+  .welcome-popup__visual {
+    min-height: 116px;
+  }
+  .welcome-popup__ribbon {
+    font-size: 0.92rem;
+    left: 14px;
+    bottom: 12px;
+  }
+  .welcome-popup__content {
+    padding: 20px 20px 18px;
+  }
+  .welcome-popup__content h3 {
+    font-size: 1.22rem;
+  }
+}
+
+/* Short screens (small phones, landscape): drop the photo so the form
+   always fits without scrolling. */
+@media (max-height: 720px) and (max-width: 720px) {
+  .welcome-popup__visual {
+    display: none;
+  }
+  .welcome-popup__close {
+    background: var(--blue-50);
+    box-shadow: none;
+  }
+}

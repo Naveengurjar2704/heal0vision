@@ -3,30 +3,52 @@
 // substitute for an in-person suitability assessment.
 //
 // `group` splits procedures into two display tiers:
-//  - "laser-vision": the three core laser refractive procedures (spotlighted)
+//  - "laser-vision": the four core laser refractive procedures (spotlighted)
 //  - "eye-care": broader ophthalmology services (shown as a secondary band)
 
 export const procedures = [
   {
-    slug: "lasik",
-    name: "LASIK",
-    fullName: "Laser-Assisted In Situ Keratomileusis",
-    tagline: "The gold-standard, blade-free laser vision correction.",
+    slug: "custom-lasik",
+    name: "Custom LASIK",
+    fullName: "Custom (Wavefront-Guided) LASIK",
+    tagline: "Laser correction mapped to the unique optics of your eye.",
     summary:
-      "A thin corneal flap is created and the underlying tissue is reshaped with an excimer laser to correct short-sightedness, long-sightedness and astigmatism.",
+      "Detailed wavefront mapping of your eye guides the excimer laser, correcting not just your basic prescription but the subtle, individual imperfections that a standard profile would miss.",
+    recovery: "Vision improves within 24 hours; most patients resume work in 1–2 days.",
+    idealFor: [
+      "Moderate to high spectacle power",
+      "Patients wanting a correction profile personalised to their eyes",
+      "Normal corneal thickness",
+    ],
+    steps: [
+      "Detailed wavefront mapping captures the unique optical imperfections of your eye.",
+      "A femtosecond laser creates a thin, hinged corneal flap.",
+      "The excimer laser reshapes the cornea using your personalised wavefront profile.",
+      "The flap is repositioned — it self-seals within minutes, no stitches needed.",
+    ],
+    highlights: ["Wavefront-guided, personalised correction", "Blade-free flap creation", "Rapid visual recovery"],
+    group: "laser-vision",
+  },
+  {
+    slug: "femto-lasik",
+    name: "Femto LASIK",
+    fullName: "Femtosecond (Blade-Free) LASIK",
+    tagline: "All-laser flap creation for a precise, blade-free LASIK experience.",
+    summary:
+      "A femtosecond laser replaces the traditional blade to create your corneal flap with exceptional precision, before an excimer laser reshapes the cornea to your prescription.",
     recovery: "Vision improves within 24 hours; most patients resume work in 1–2 days.",
     idealFor: [
       "Moderate to high spectacle power",
       "Normal corneal thickness",
-      "Patients wanting the fastest visual recovery",
+      "Patients wanting the fastest visual recovery with a fully blade-free technique",
     ],
     steps: [
-      "A femtosecond laser creates a thin, hinged corneal flap.",
+      "A femtosecond laser creates a thin, hinged corneal flap — no blade involved.",
       "The flap is gently lifted to expose the corneal bed.",
-      "An excimer laser reshapes the cornea based on your custom prescription.",
+      "An excimer laser reshapes the cornea based on your prescription.",
       "The flap is repositioned — it self-seals within minutes, no stitches needed.",
     ],
-    highlights: ["Blade-free, all-laser technique", "Painless, ~10 minutes per eye", "Rapid visual recovery"],
+    highlights: ["100% blade-free, all-laser technique", "Painless, ~10 minutes per eye", "Rapid visual recovery"],
     group: "laser-vision",
   },
   {
@@ -52,12 +74,12 @@ export const procedures = [
     group: "laser-vision",
   },
   {
-    slug: "transprk",
-    name: "TransPRK",
-    fullName: "Trans-Epithelial Photorefractive Keratectomy",
+    slug: "touchless",
+    name: "Touchless",
+    fullName: "Touchless Surface Laser Treatment",
     tagline: "A completely touch-free, no-flap, no-blade surface treatment.",
     summary:
-      "A single excimer laser removes the corneal surface epithelium and reshapes the cornea in one continuous, touch-free pass — no flap or incision of any kind.",
+      "A single excimer laser removes the corneal surface epithelium and reshapes the cornea in one continuous, touch-free pass — no flap or incision of any kind, and nothing but the laser ever touches your eye.",
     recovery: "The surface layer regenerates over 3–5 days; vision continues to sharpen over the following weeks.",
     idealFor: [
       "Thinner corneas not suited to flap-based procedures",
@@ -65,12 +87,12 @@ export const procedures = [
       "Those who prioritise a completely blade-free, touch-free technique",
     ],
     steps: [
-      "Numbing eye drops are applied — no injections, no blade.",
+      "Numbing eye drops are applied — no injections, no blade, no instrument touches the eye.",
       "A single excimer laser removes the thin epithelial layer and reshapes the cornea.",
       "A protective bandage contact lens is placed over the eye.",
       "The surface epithelium naturally regenerates within a few days.",
     ],
-    highlights: ["Zero flap, zero incision", "Preserves maximum corneal tissue", "Well suited to thinner corneas"],
+    highlights: ["Zero touch, zero flap, zero incision", "Preserves maximum corneal tissue", "Well suited to thinner corneas"],
     group: "laser-vision",
   },
   {
@@ -105,7 +127,7 @@ export const procedures = [
     recovery: "Vision often improves within a day, with most patients resuming normal routines within 2–3 days.",
     idealFor: [
       "Very high spectacle power",
-      "Thinner corneas not suited to LASIK, SMILE or TransPRK",
+      "Thinner corneas not suited to laser vision correction",
       "Patients who want a correction option that can be removed if ever needed",
     ],
     steps: [
@@ -235,9 +257,43 @@ export const laserProcedures = procedures.filter((p) => p.group === "laser-visio
 export const moreEyeCareProcedures = procedures.filter((p) => p.group === "eye-care");
 
 // Comparison table shown on the "Compare Procedures" section.
+// `values` is keyed by procedure slug so the table can render however many
+// laser-vision procedures exist without needing matching column props.
 export const comparisonRows = [
-  { label: "Technique", lasik: "Flap + laser reshaping", smile: "Flap-free, keyhole incision", transprk: "No flap, no incision" },
-  { label: "Best for corneal thickness", lasik: "Normal", smile: "Normal to slightly thin", transprk: "Thinner corneas" },
-  { label: "Typical recovery", lasik: "1–2 days", smile: "1–2 days", transprk: "3–5 days" },
-  { label: "Contact / sports suitability", lasik: "Good, after initial healing", smile: "Very good", transprk: "Excellent, most robust surface" },
+  {
+    label: "Technique",
+    values: {
+      "custom-lasik": "Flap + wavefront-guided reshaping",
+      "femto-lasik": "Blade-free flap + laser reshaping",
+      smile: "Flap-free, keyhole incision",
+      touchless: "No flap, no incision, no touch",
+    },
+  },
+  {
+    label: "Best for corneal thickness",
+    values: {
+      "custom-lasik": "Normal",
+      "femto-lasik": "Normal",
+      smile: "Normal to slightly thin",
+      touchless: "Thinner corneas",
+    },
+  },
+  {
+    label: "Typical recovery",
+    values: {
+      "custom-lasik": "1–2 days",
+      "femto-lasik": "1–2 days",
+      smile: "1–2 days",
+      touchless: "3–5 days",
+    },
+  },
+  {
+    label: "Contact / sports suitability",
+    values: {
+      "custom-lasik": "Good, after initial healing",
+      "femto-lasik": "Good, after initial healing",
+      smile: "Very good",
+      touchless: "Excellent, most robust surface",
+    },
+  },
 ];

@@ -18,7 +18,9 @@ function buildWhatsAppUrl(values) {
   return `${clinicInfo.whatsappHref}?text=${encodeURIComponent(lines.join("\n"))}`;
 }
 
-export default function ContactForm() {
+// `compact` drops the optional message box so the form fits inside the
+// welcome popup without the user having to scroll.
+export default function ContactForm({ compact = false }) {
   const [values, setValues] = useState(initialState);
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState("idle"); // idle | submitted
@@ -97,17 +99,16 @@ export default function ContactForm() {
         </select>
       </div>
 
-      <div className="contact-form__row">
-        <label htmlFor="message">Message (optional)</label>
-        <textarea id="message" name="message" rows={4} value={values.message} onChange={handleChange} />
-      </div>
+      {!compact && (
+        <div className="contact-form__row">
+          <label htmlFor="message">Message (optional)</label>
+          <textarea id="message" name="message" rows={4} value={values.message} onChange={handleChange} />
+        </div>
+      )}
 
       <button type="submit" className="btn btn-primary btn-block">
-        Send via WhatsApp
+        Submit
       </button>
-      <p className="contact-form__note">
-        Submitting opens WhatsApp with a pre-filled message to our team at {clinicInfo.phone}.
-      </p>
     </form>
   );
 }

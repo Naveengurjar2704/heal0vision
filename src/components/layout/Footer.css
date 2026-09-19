@@ -88,6 +88,16 @@
   font-size: 0.78rem;
 }
 
+.footer__partner--more {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.3);
+  white-space: nowrap;
+}
+
+.footer__partner--more:hover {
+  background: rgba(255, 255, 255, 0.26);
+}
+
 .footer__bottom {
   display: flex;
   justify-content: space-between;

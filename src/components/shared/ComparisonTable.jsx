@@ -1,4 +1,4 @@
-import { comparisonRows } from "../../data/procedures";
+import { laserProcedures, comparisonRows } from "../../data/procedures";
 import "./ComparisonTable.css";
 
 export default function ComparisonTable() {
@@ -8,18 +8,20 @@ export default function ComparisonTable() {
         <thead>
           <tr>
             <th scope="col">&nbsp;</th>
-            <th scope="col">LASIK</th>
-            <th scope="col">SMILE</th>
-            <th scope="col">TransPRK</th>
+            {laserProcedures.map((p) => (
+              <th scope="col" key={p.slug}>
+                {p.name}
+              </th>
+            ))}
           </tr>
         </thead>
         <tbody>
           {comparisonRows.map((row) => (
             <tr key={row.label}>
               <th scope="row">{row.label}</th>
-              <td>{row.lasik}</td>
-              <td>{row.smile}</td>
-              <td>{row.transprk}</td>
+              {laserProcedures.map((p) => (
+                <td key={p.slug}>{row.values[p.slug]}</td>
+              ))}
             </tr>
           ))}
         </tbody>

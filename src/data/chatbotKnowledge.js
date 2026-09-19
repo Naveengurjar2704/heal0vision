@@ -6,9 +6,9 @@
 export const knowledgeBase = [
   {
     id: "lasik",
-    keywords: ["lasik"],
+    keywords: ["lasik", "custom lasik", "femto lasik", "femtosecond", "wavefront", "blade-free lasik"],
     answer:
-      "LASIK reshapes your cornea with an excimer laser after creating a thin corneal flap. It's a great fit for moderate–high spectacle power with a normal corneal thickness, and most patients see clearly within 24 hours.",
+      "We offer two LASIK options: Custom LASIK uses wavefront mapping to personalise the correction to your eyes, while Femto LASIK uses an all-laser, blade-free technique to create the corneal flap. Both suit moderate–high spectacle power with a normal corneal thickness, and most patients see clearly within 24 hours.",
   },
   {
     id: "smile",
@@ -17,10 +17,10 @@ export const knowledgeBase = [
       "SMILE is a flap-free procedure — a single laser reshapes the cornea from within and removes a tiny lenticule through a keyhole incision (2–4mm). It suits active lifestyles well, including sports and defence aspirants.",
   },
   {
-    id: "transprk",
-    keywords: ["transprk", "trans-prk", "trans prk", "prk"],
+    id: "touchless",
+    keywords: ["touchless", "touch-free", "transprk", "trans-prk", "trans prk", "prk"],
     answer:
-      "TransPRK is a completely touch-free, no-flap, no-blade surface treatment done with a single laser pass. It's often recommended for thinner corneas, with the surface healing over 3–5 days.",
+      "Touchless is a completely touch-free, no-flap, no-blade surface treatment done with a single laser pass — nothing but the laser ever touches your eye. It's often recommended for thinner corneas, with the surface healing over 3–5 days.",
   },
   {
     id: "cataract",
@@ -32,7 +32,7 @@ export const knowledgeBase = [
     id: "icl",
     keywords: ["icl", "implantable lens", "implantable contact lens", "collamer"],
     answer:
-      "ICL (Implantable Collamer Lens) places a small lens between your iris and natural lens — great for very high spectacle power or corneas too thin for LASIK/SMILE/TransPRK. No corneal tissue is removed, and it's removable if ever needed.",
+      "ICL (Implantable Collamer Lens) places a small lens between your iris and natural lens — great for very high spectacle power or corneas too thin for laser vision correction. No corneal tissue is removed, and it's removable if ever needed.",
   },
   {
     id: "squint",
@@ -68,19 +68,19 @@ export const knowledgeBase = [
     id: "compare",
     keywords: ["difference", "compare", "which is better", "better option", "vs"],
     answer:
-      "In short: LASIK uses a corneal flap and has the fastest recovery; SMILE is flap-free with a tiny incision, great for active lifestyles; TransPRK is entirely flap- and blade-free, often preferred for thinner corneas. The right one for you depends on your prescription and corneal thickness — a free screening will confirm this.",
+      "In short: Custom LASIK and Femto LASIK use a corneal flap and have the fastest recovery (Custom adds wavefront personalisation, Femto is fully blade-free); SMILE is flap-free with a tiny incision, great for active lifestyles; Touchless is entirely flap-, blade- and touch-free, often preferred for thinner corneas. The right one for you depends on your prescription and corneal thickness — a free screening will confirm this.",
   },
   {
     id: "pain",
     keywords: ["pain", "hurt", "painful"],
     answer:
-      "All three procedures are done under numbing eye drops, not injections — patients typically feel pressure but not pain. Mild grittiness for a day or two afterward is normal, especially with TransPRK.",
+      "All our laser procedures are done under numbing eye drops, not injections — patients typically feel pressure but not pain. Mild grittiness for a day or two afterward is normal, especially with Touchless.",
   },
   {
     id: "recovery",
     keywords: ["recovery", "heal", "downtime", "back to work", "return to work"],
     answer:
-      "Recovery depends on the procedure: LASIK and SMILE patients often resume work in 1–2 days, while TransPRK's surface layer takes about 3–5 days to regenerate before vision fully settles.",
+      "Recovery depends on the procedure: LASIK and SMILE patients often resume work in 1–2 days, while Touchless's surface layer takes about 3–5 days to regenerate before vision fully settles.",
   },
   {
     id: "eligibility",
@@ -90,15 +90,68 @@ export const knowledgeBase = [
   },
   {
     id: "cost",
-    keywords: ["cost", "price", "fee", "charges", "expensive", "emi", "installment", "instalment"],
+    keywords: [
+      "cost",
+      "price",
+      "pricing",
+      "fee",
+      "charges",
+      "how much",
+      "expensive",
+      "emi",
+      "installment",
+      "instalment",
+      "quote",
+    ],
     answer:
-      "Heal O Vision offers no-cost EMI, so you can split your procedure cost into easy, zero-interest monthly instalments. Exact pricing depends on the procedure and eye — please contact us for a personalised quote.",
+      "Heal O Vision offers no-cost EMI, so you can split your procedure cost into easy, zero-interest monthly instalments. Exact pricing depends on the procedure and your eyes — please contact us for a personalised quote after your free check-up.",
   },
   {
     id: "insurance",
-    keywords: ["insurance", "cashless", "hdfc", "icici", "bajaj", "tata", "star health", "claim"],
+    keywords: [
+      "insurance",
+      "cashless",
+      "claim",
+      "tpa",
+      "mediclaim",
+      "policy",
+      "aditya birla",
+      "bajaj",
+      "care health",
+      "cholamandalam",
+      "east west assist",
+      "ericson",
+      "family health plan",
+      "future generali",
+      "genins",
+      "go digit",
+      "good health",
+      "hdfc",
+      "health assist",
+      "health india",
+      "heritage health",
+      "icici",
+      "iffco tokio",
+      "l&t",
+      "liberty",
+      "manipal cigna",
+      "md india",
+      "medi assist",
+      "medsave",
+      "navi health",
+      "niva bupa",
+      "paramount",
+      "park mediclaim",
+      "raksha",
+      "reliance general",
+      "sbi general",
+      "star health",
+      "tata",
+      "universal sompo",
+      "vidal health",
+    ],
     answer:
-      "We offer cashless insurance billing with partners including HDFC ERGO, ICICI Lombard, Bajaj Allianz, TATA AIG and Star Health — our team handles the paperwork directly with your insurer.",
+      "All insurance accepted (T&C apply) — we bill directly with 36 insurance companies and TPAs, including HDFC ERGO, ICICI Lombard, Bajaj Allianz, TATA AIG, Star Health, Niva Bupa, Care Health and Aditya Birla. You'll find the full list on our Insurance Partners page. What's covered depends on your policy terms, waiting periods and your insurer's approval — our team handles the paperwork and confirms your cover before the procedure.",
   },
   {
     id: "checkup",
@@ -116,7 +169,7 @@ export const knowledgeBase = [
     id: "glasses",
     keywords: ["glasses", "spectacles", "contact lens", "contacts", "specs"],
     answer:
-      "Yes — the goal of LASIK, SMILE and TransPRK is to significantly reduce or remove your day-to-day dependence on glasses or contact lenses. Most patients achieve 20/20 or near-20/20 vision.",
+      "Yes — the goal of our laser vision procedures is to significantly reduce or remove your day-to-day dependence on glasses or contact lenses. Most patients achieve 20/20 or near-20/20 vision.",
   },
   {
     id: "book",
@@ -128,15 +181,15 @@ export const knowledgeBase = [
     id: "greeting",
     keywords: ["hi", "hello", "hey", "namaste"],
     answer:
-      "Hello! I'm the Heal O Vision assistant. Ask me about LASIK, SMILE, TransPRK, cataract, ICL, squint, cornea, glaucoma, retina, oculoplasty, recovery, cost/EMI, insurance, or how to book a free eye check-up.",
+      "Hello! I'm the Heal O Vision assistant. Ask me about Custom LASIK, Femto LASIK, SMILE, Touchless, cataract, ICL, squint, cornea, glaucoma, retina, oculoplasty, recovery, cost/EMI, insurance, or how to book a free eye check-up.",
   },
 ];
 
 export const fallbackAnswer =
-  "I can only help with questions about eye care at Heal O Vision — laser vision correction (LASIK, SMILE, TransPRK) and other eye procedures (cataract, ICL, squint, cornea, glaucoma, retina, oculoplasty), plus recovery, cost or booking. For anything else, please call us or use the contact form and our team will help directly.";
+  "I can only help with questions about eye care at Heal O Vision — laser vision correction (Custom LASIK, Femto LASIK, SMILE, Touchless) and other eye procedures (cataract, ICL, squint, cornea, glaucoma, retina, oculoplasty), plus recovery, cost or booking. For anything else, please call us or use the contact form and our team will help directly.";
 
 export const welcomeMessage =
-  "Hi, I'm the Heal O Vision assistant. Ask me about LASIK, SMILE, TransPRK, cataract, ICL, squint, cornea, glaucoma, retina, oculoplasty, recovery, cost/EMI, insurance or booking a free check-up.";
+  "Hi, I'm the Heal O Vision assistant. Ask me about Custom LASIK, Femto LASIK, SMILE, Touchless, cataract, ICL, squint, cornea, glaucoma, retina, oculoplasty, recovery, cost/EMI, insurance or booking a free check-up.";
 
 export function findAnswer(message) {
   const text = message.toLowerCase();
