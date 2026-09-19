@@ -10,7 +10,7 @@ export const clinicInfo = {
   whatsappHref: "https://wa.me/919220559420",
   instagram: "https://www.instagram.com/healovision/",
   email: "care@healovision.com", // PLACEHOLDER — confirm real inbox
-  address: "Add your clinic's full address here", // PLACEHOLDER
+  address: "Plot No. WZ-G-1/87, Khasra No. 86/3, G-1, Old Village Hastsal, Uttam Nagar, New Delhi, 110059",
   mapEmbedQuery: "", // PLACEHOLDER — Google Maps place link
   hours: "Mon – Sat: 10:00 AM – 7:00 PM", // PLACEHOLDER — confirm real hours
 };
