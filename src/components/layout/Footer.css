@@ -98,6 +98,16 @@
   background: rgba(255, 255, 255, 0.26);
 }
 
+.footer__bottom-link {
+  color: var(--blue-150);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.footer__bottom-link:hover {
+  color: var(--white);
+}
+
 .footer__bottom {
   display: flex;
   justify-content: space-between;

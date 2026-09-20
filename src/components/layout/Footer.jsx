@@ -80,7 +80,10 @@ export default function Footer() {
       </div>
 
       <div className="footer__bottom container">
-        <p>© {new Date().getFullYear()} Heal O Vision. All rights reserved.</p>
+        <p>
+          © {new Date().getFullYear()} Heal O Vision. All rights reserved. ·{" "}
+          <Link to="/privacy" className="footer__bottom-link">Privacy Policy</Link>
+        </p>
         <p className="footer__disclaimer">
           *T&amp;C apply on insurance cover. Information on this site is for general awareness and does not replace an in-person consultation.
         </p>

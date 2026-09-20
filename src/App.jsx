@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Insurance from "./pages/Insurance";
 import Procedures from "./pages/Procedures";
+import Privacy from "./pages/Privacy";
 import ProcedureDetail from "./pages/ProcedureDetail";
 import NotFound from "./pages/NotFound";
 
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="insurance" element={<Insurance />} />
         <Route path="procedures" element={<Procedures />} />
+        <Route path="privacy" element={<Privacy />} />
         <Route path="procedures/:slug" element={<ProcedureDetail />} />
         <Route path="*" element={<NotFound />} />
       </Route>
